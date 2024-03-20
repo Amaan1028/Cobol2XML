@@ -1,20 +1,19 @@
 package junit;
 
 import static org.junit.Assert.*;
-import parse.tokens.Num;
+import parse.tokens.Symbol;
 import java.util.ArrayList;
 
 import org.junit.Test;
 
-public class NumTest {
+public class SymbolTest {
 
 	@Test
 	public void test() {
-		Num num = new Num();
-		int maxDepth = 2;
-		int depth = 1;
+		char c = 'a';
+		Symbol symbol = new Symbol(c);
 		ArrayList<String> arrayList = new ArrayList<String>();
-		arrayList = num.randomExpansion(maxDepth, depth);
+		arrayList = symbol.randomExpansion(2, 1);
 		assertFalse(arrayList.isEmpty());
 	}
 
